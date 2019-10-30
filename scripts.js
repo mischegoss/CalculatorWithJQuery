@@ -17,6 +17,7 @@ const equalshow=  $("#show-equals");
 const operatorshow = $("#operator-printout");
 const operatorbutton = $( ".operator" );
 const equalsbutton = $( ".equals" );
+const numbersbutton = $(".number");
 
 
 /*This function clears and resets everything. It is called at the bottom to initialize the calculator */
@@ -36,19 +37,21 @@ function clearAll() {
 
    equalshow.hide();
 
-   equalsbutton.attr("disabled", false);
+   equalsbutton.attr("disabled", true);
    operatorbutton.attr("disabled", false);
+   numbersbutton.attr("disabled", false);
   
 
 }
 
 /*Creates an on click event for the numbers */
 
-$( ".number" ).click(function() {
+numbersbutton.click(function() {
     console.log("number clicked")
     if(isOperatorClicked) {
         secondNumber = secondNumber + $(this).val();
         secondnumshow.text(secondNumber)
+        equalsbutton.attr("disabled", false);
     } else {
         firstNumber = firstNumber + $(this).val();
         firstnumshow.text(firstNumber)
@@ -87,6 +90,7 @@ $( ".number" ).click(function() {
   equalsbutton.click(function() {
      
    equalshow.show();
+   numbersbutton.attr("disabled", true);
     equalsbutton.attr("disabled", true);
     if (isOperatorClicked) {
         firstNumber = parseInt(firstNumber);
