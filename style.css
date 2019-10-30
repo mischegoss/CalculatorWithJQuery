@@ -1,0 +1,18 @@
+.calculator {
+    width: 60vw;
+   
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.btn {
+    width: 95%;
+    margin: 15px 0;
+    
+}
+
+.hidden {
+    display: none;
+}

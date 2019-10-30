@@ -1,0 +1,122 @@
+<!--I started by using Bootstrap's template-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!--This is my custom css stylesheet. I linked it below the bootstrap to make sure it worked-->
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+  </head>
+
+  <!--I decided to use a bootstrap card with a header and footer for my calculator-->
+  <body>
+    <div class="card calculator center">
+        <div class="card-header">
+            <h3>
+                <span id="first-number-printout">one</span>
+                <span id="operator-printout">two</span>
+                <span id="second-number-printout">three</span>
+
+            <h3><span id="show-equals" class="hidden">= </span> <span id="result-printout">11</span></h3>
+           
+            </div>
+        <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <button type="button" class="btn btn-info number" value="1">1</button>
+                        </div>
+                        <div class="col-3">
+                                <button type="button" class="btn btn-info number" value="2">2</button>
+                            </div>
+                            <div class="col-3">
+                                    <button type="button" class="btn btn-info number" value="3">3</button>
+                                </div>
+                                <div class="col-3">
+                                        <button type="button" class="btn btn-warning operator" value="add">+</button>
+                                    </div>
+
+
+                   
+
+                    </div>
+
+                    <div class="row">
+                            <div class="col-3">
+                                <button type="button" class="btn btn-info number" value="4">4</button>
+                            </div>
+                            <div class="col-3">
+                                    <button type="button" class="btn btn-info number" value="5">5</button>
+                                </div>
+                                <div class="col-3">
+                                        <button type="button" class="btn btn-info number" value="6">6</button>
+                                    </div>
+                                    <div class="col-3">
+                                            <button type="button" class="btn btn-warning operator" value="subtract">-</button>
+                                        </div>
+    
+    
+                       
+    
+                        </div>
+
+
+                        <div class="row">
+                                <div class="col-3">
+                                    <button type="button" class="btn btn-info number" value="7">7</button>
+                                </div>
+                                <div class="col-3">
+                                        <button type="button" class="btn btn-info number" value="8">8</button>
+                                    </div>
+                                    <div class="col-3">
+                                            <button type="button" class="btn btn-info number" value="9">9</button>
+                                        </div>
+                                        <div class="col-3">
+                                                <button type="button" class="btn btn-warning  operator" value="multiply">x</button>
+                                            </div>
+        
+        
+                           
+        
+                            </div>
+
+
+                            <div class="row">
+                                    <div class="col-6">
+                                        <button type="button" class="btn btn-success equals" value="equals">=</button>
+                                    </div>
+                                    
+                                    <div class="col-3">
+                                            <button type="button" class="btn btn-warning operator" value="power">EXP</button>
+                                        </div>
+                                        <div class="col-3">
+                                                <button type="button" class="btn btn-warning  operator" value="divide">÷</button>
+                                            </div>
+                                           
+            
+            
+                               
+            
+                                </div>
+        </div>
+        </div>
+
+        <div class="card-footer row justify-content-center">
+                <button type="button" class="btn btn-danger center clear">Clear</button>
+        </div>
+      </div>
+
+<!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--This is the page where my Javascript will live-->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
