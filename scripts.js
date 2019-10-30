@@ -49,9 +49,9 @@ $(document).ready(function() {
       equalshow.hide();
 
       //We want the equals button to be disabled until a second Number is entered. 
-
+      //We want the operator disabled until a first button is pushed.
       equalsbutton.attr("disabled", true);
-      operatorbutton.attr("disabled", false);
+      operatorbutton.attr("disabled", true);
       numbersbutton.attr("disabled", false);
 
 
@@ -71,7 +71,8 @@ $(document).ready(function() {
           equalsbutton.attr("disabled", false);
       } else { //if not true, we add to the first number
           firstNumber = firstNumber + $(this).val();
-          firstnumshow.text(firstNumber)
+          firstnumshow.text(firstNumber);
+          operatorbutton.attr("disabled", false);
       }
   });
 
