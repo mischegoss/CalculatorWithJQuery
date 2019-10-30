@@ -1,12 +1,16 @@
 .calculator {
     width: 60vw;
-   
+
 }
+/*I used 60vw here. That means I want my width to be 60 percent of the viewer's width. I could have also used a percentage here. */
 
 .center {
     margin: 0 auto;
 }
 
+/*This is a nifty trick to center. I usually give it its own class like this and apply as needed */
+
+/*This setting is telling the button to take up 95% of its container div. I also set a top and button margin to give space between rows */
 .btn {
     width: 95%;
     margin: 15px 0;
