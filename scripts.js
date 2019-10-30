@@ -55,13 +55,16 @@ $(document).ready(function() {
   }
 
   /*Creates an on click event for the numbers */
+  /*The reason you are not seeing the dollar sign here is because I used a variable. So numbersbutton is standing in
+   * for the dollar sign code you may have expected. When you are going to target an item more than once, it is
+   * often more readable to use a variable like above */ 
 
   numbersbutton.click(function() {
       //This first tests if the Operator has been clicked.
-      if (isOperatorClicked) { //If true, we add to the second number
+      if (isOperatorClicked) { //If has been clicked, we add to the second number
           secondNumber = secondNumber + $(this).val();
           secondnumshow.text(secondNumber)
-          //sign there is now a second number, the equals button should be enabled
+          //since there is now a second number, the equals button should be enabled
           equalsbutton.attr("disabled", false);
       } else { //if not true, we add to the first number
           firstNumber = firstNumber + $(this).val();
@@ -78,8 +81,8 @@ $(document).ready(function() {
 
       //This sets the value of the operator button to the value of the button pushed
       operator = $(this).val();
-     //A switch statement is a great way to not have to write else if's here.
-     //In this case, I want the actual operator, not the name to print on the screen
+     //A switch statement is a great way to not have to write else if's here. (But else/ifs work too!)
+     //In this case, I want the actual operator (+, -, etc), not the name to print on the screen so I use a switch statement.
       switch (operator) {
           case "add":
              //This is printing it to the span. It will show up on the sccreen. 
@@ -105,6 +108,7 @@ $(document).ready(function() {
   });
 
   /*Creates an on click event for the equals */
+  
   equalsbutton.click(function() {
       //When the equals button is pushed, we want to show the span that holds the equal sign.
       equalshow.show();
