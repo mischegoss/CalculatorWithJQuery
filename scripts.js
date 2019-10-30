@@ -1,3 +1,6 @@
+
+/*I started by writing a document.ready function. It wraps around all my other code and says, "hey, wait until the document is ready"
+  before you start to do stuff. */
 $(document).ready(function() {
 
 
@@ -24,7 +27,7 @@ $(document).ready(function() {
   let isOperatorClicked = false; //When we start, we want to make sure Operator is not clicked.
 
   /*I used const and let here. In a bad nutshell, const are used when stuff isn't going to change. For things that will change
-   * you want to use let. In our class, we have used var so far. It would be perfectly fine if all of these were var */
+    you want to use let. In our class, we have used var so far. It would be perfectly fine if all of these were var */
 
   /*This function clears and resets everything. It is called at the bottom to initialize the calculator */
   function clearAll() {
@@ -56,8 +59,8 @@ $(document).ready(function() {
 
   /*Creates an on click event for the numbers */
   /*The reason you are not seeing the dollar sign here is because I used a variable. So numbersbutton is standing in
-   * for the dollar sign code you may have expected. When you are going to target an item more than once, it is
-   * often more readable to use a variable like above */ 
+    for the dollar sign code you may have expected. When you are going to target an item more than once, it is
+    often more readable to use a variable like above */ 
 
   numbersbutton.click(function() {
       //This first tests if the Operator has been clicked.
@@ -161,5 +164,5 @@ $(document).ready(function() {
 
 
 
-  clearAll();
+  clearAll(); // When the document si loaded clearAll is run to initialize the calculator
 }); //This is for the document ready. It has to be last. 
