@@ -15,12 +15,16 @@ $(document).ready(function() {
   const equalsbutton = $(".equals");
   const numbersbutton = $(".number");
 
+  /*These are variables that we are going to manipulate in our code */
+
   let firstNumber = ""; //sets to empty string
   let secondNumber = ""; //sets to empty string
   let result = 0; //sets to zero
   let operator = ""; //sets to empty string
   let isOperatorClicked = false; //When we start, we want to make sure Operator is not clicked.
 
+  /*I used const and let here. In a bad nutshell, const are used when stuff isn't going to change. For things that will change
+   * you want to use let. In our class, we have used var so far. It would be perfectly fine if all of these were var */
 
   /*This function clears and resets everything. It is called at the bottom to initialize the calculator */
   function clearAll() {
