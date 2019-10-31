@@ -26,7 +26,7 @@ $(document).ready(function() {
   let operator = ""; //sets to empty string
   let isOperatorClicked = false; //When we start, we want to make sure Operator is not clicked.
 
-  /*I used const and let here. In a bad nutshell, const are used when stuff isn't going to change. For things that will change
+  /*I used const and let here. In a bad nutshell, const is used when stuff isn't going to change and stay constant. For things that will change
     you want to use let. In our class, we have used var so far. It would be perfectly fine if all of these were var */
 
   /*This function clears and resets everything. It is called at the bottom to initialize the calculator */
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
       equalshow.hide();
 
-      //We want the equals button to be disabled until a second Number is entered. 
+      //We want the equals button to be disabled until a second number is entered. 
       //We want the operator disabled until a first button is pushed.
       equalsbutton.attr("disabled", true);
       operatorbutton.attr("disabled", true);
@@ -58,18 +58,18 @@ $(document).ready(function() {
   }
 
   /*Creates an on click event for the numbers */
-  /*The reason you are not seeing the dollar sign here is because I used a variable. So numbersbutton is standing in
+  /*The reason you are not seeing the dollar sign here is because I used a variable to make the code neater. So numbersbutton is standing in
     for the dollar sign code you may have expected. When you are going to target an item more than once, it is
     often more readable to use a variable like above */ 
 
   numbersbutton.click(function() {
       //This first tests if the Operator has been clicked.
-      if (isOperatorClicked) { //If has been clicked, we add to the second number
+      if (isOperatorClicked) { //If operator has been clicked, we add to the second number
           secondNumber = secondNumber + $(this).val();
           secondnumshow.text(secondNumber)
           //since there is now a second number, the equals button should be enabled
           equalsbutton.attr("disabled", false);
-      } else { //if not true, we add to the first number
+      } else { //if not true and operator has not been clicked, we add to the first number
           firstNumber = firstNumber + $(this).val();
           firstnumshow.text(firstNumber);
           operatorbutton.attr("disabled", false);
@@ -87,8 +87,9 @@ $(document).ready(function() {
       operator = $(this).val();
      //A switch statement is a great way to not have to write else if's here. (But else/ifs work too!)
      //In this case, I want the actual operator (+, -, etc), not the name to print on the screen so I use a switch statement.
-      switch (operator) {
-          case "add":
+      switch (operator) { //Switch is evaluating the value of operator
+
+          case "add": //so, in the case it is "add"...
              //This is printing it to the span. It will show up on the sccreen. 
               operatorshow.text("+");
             //break is an important part of a switch statement that says "stop here if the condition is met"
@@ -114,7 +115,7 @@ $(document).ready(function() {
   /*Creates an on click event for the equals */
   
   equalsbutton.click(function() {
-      //When the equals button is pushed, we want to show the span that holds the equal sign.
+      //When the equals button is pushed, we want to show the span that holds the equal sign since it was hidden.
       equalshow.show();
       //We also want to make sure that the numbers can't be pushed again, so we disable the numbers nad equals button.
       numbersbutton.attr("disabled", true);
@@ -127,7 +128,7 @@ $(document).ready(function() {
           firstNumber = parseInt(firstNumber);
           secondNumber = parseInt(secondNumber);
 
-          //Another switch statement. Again, this could also be an if/else statement.
+          //Another switch statement. Again, this could also be an if/else statement to evaluate the value of operator.
           switch (operator) {
               case "add":
                   result = firstNumber + secondNumber;
