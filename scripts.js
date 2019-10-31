@@ -58,7 +58,8 @@ $(document).ready(function() {
   }
 
   /*Creates an on click event for the numbers */
-  /*The reason you are not seeing the dollar sign here is because I used a variable to make the code neater. So numbersbutton is standing in
+  /*The reason you are not seeing the dollar sign here is because I used a variable to make the code neater. 
+    So numbersbutton is standing in
     for the dollar sign code you may have expected. When you are going to target an item more than once, it is
     often more readable to use a variable like above */ 
 
@@ -89,7 +90,7 @@ $(document).ready(function() {
      //In this case, I want the actual operator (+, -, etc), not the name to print on the screen so I use a switch statement.
       switch (operator) { //Switch is evaluating the value of operator
 
-          case "add": //so, in the case it is "add"...
+          case "add": //so, in the case that operator = add, you should do this...
              //This is printing it to the span. It will show up on the sccreen. 
               operatorshow.text("+");
             //break is an important part of a switch statement that says "stop here if the condition is met"
@@ -121,7 +122,8 @@ $(document).ready(function() {
       numbersbutton.attr("disabled", true);
       equalsbutton.attr("disabled", true);
 
-      //This is a failsafe. Only if an operator is clicked and there is at least one number in the second number should it give results
+      //This is a failsafe. Only if an operator is clicked and there is at least one number in the second number
+      // should it give results
       if (isOperatorClicked && secondNumber != "") {
 
         //Our numbers are a string. parseInt makes them integers.
@@ -166,5 +168,5 @@ $(document).ready(function() {
 
 
 
-  clearAll(); // When the document si loaded clearAll is run to initialize the calculator
+  clearAll(); // When the document is loaded clearAll is run to initialize the calculator
 }); //This is for the document ready. It has to be last. 
