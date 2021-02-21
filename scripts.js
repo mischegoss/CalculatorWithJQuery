@@ -1,13 +1,9 @@
 
-/*I started by writing a document.ready function. It wraps around all my other code and says, "hey, wait until the document is ready"
-  before you start to do stuff. */
+// We start with a document.ready() to make the JavaScript ready after the DOM has loaded
 $(document).ready(function() {
 
 
   //Global variables
-
-
- /*These variables are here to simplify the code */
   const firstnumshow = $("#first-number-printout");
   const secondnumshow = $("#second-number-printout");
   const resultsshow = $("#result-printout");
@@ -18,18 +14,15 @@ $(document).ready(function() {
   const equalsbutton = $(".equals");
   const numbersbutton = $(".number");
 
-  /*These are variables that we are going to manipulate in our code */
-
+  // Variables manipulated in the code 
   let firstNumber = ""; //sets to empty string
   let secondNumber = ""; //sets to empty string
   let result = 0; //sets to zero
   let operator = ""; //sets to empty string
   let isOperatorClicked = false; //When we start, we want to make sure Operator is not clicked.
 
-  /*I used const and let here. In a bad nutshell, const is used when stuff isn't going to change and stay constant. For things that will change
-    you want to use let. In our class, we have used var so far. It would be perfectly fine if all of these were var */
 
-  /*This function clears and resets everything. It is called at the bottom to initialize the calculator */
+  // We use a clearAll() function to initialize and reset the calculator
   function clearAll() {
 
       firstNumber = ""; //sets to empty string
@@ -38,13 +31,11 @@ $(document).ready(function() {
       isOperatorClicked = false; //this is the default
      
 
-     //This clears out anything that has been printed to the screen
+     // We use .empty() to clear anything that has been printed to the screen
       firstnumshow.empty();
       secondnumshow.empty();
       resultsshow.empty();
       operatorshow.empty();
-
-      //We don't want to see the equal sign until we push the button. So, we can hide it.
 
       equalshow.hide();
 
