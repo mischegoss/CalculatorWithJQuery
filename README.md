@@ -1,3 +1,11 @@
-This is a sample Calculator with extensive comments. It is meant to be used to show the workings of JQuery and setting up a multi-file project.
+## Calculator Sample
 
-This project uses Bootstrap, JQuery
+This is a sample Calculator with extensive comments. 
+
+## Purpose
+
+This code with extensive comments shows the workings of JQuery and setting up a multi-file project.
+
+### Technologies Used
+
+This project uses Bootstrap, JQuery.
